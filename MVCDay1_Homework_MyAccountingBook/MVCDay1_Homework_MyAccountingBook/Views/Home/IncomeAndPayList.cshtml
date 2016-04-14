@@ -1,0 +1,27 @@
+﻿@*@model MVCDay1_Homework_MyAccountingBook.Models.IncomeAndPayRecordModel*@
+
+@using MVCDay1_Homework_MyAccountingBook.Models
+@model List<IncomeAndPayRecordModel>
+
+@{
+    ViewBag.Title = "IncomeAndPayList";
+    Layout = null;
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>類別</th>
+        <th>日期</th>
+        <th>金額</th>
+    </tr>
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <tr>
+            <td>@(i + 1)</td>
+            <td>@Model[i].Category</td>
+            <td>@Model[i].ImplementDate.ToString("yyyy-MM-dd")</td>
+            <td>@Model[i].Money.ToString("0,0")</td>
+        </tr>
+    }
+</table>
