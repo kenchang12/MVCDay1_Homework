@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace MVCDay1_Homework_MyAccountingBook.Models
+namespace MVCDay1_Homework_MyAccountingBook.Models.ViewModels
 {
     public class IncomeAndPayRecordModel
     {

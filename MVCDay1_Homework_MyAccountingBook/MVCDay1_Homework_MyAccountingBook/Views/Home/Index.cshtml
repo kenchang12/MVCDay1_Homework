@@ -1,4 +1,5 @@
-﻿@model MVCDay1_Homework_MyAccountingBook.Models.IncomeAndPayRecordModel
+﻿
+@model MVCDay1_Homework_MyAccountingBook.Models.ViewModels.IncomeAndPayRecordModel
 
 @{
     ViewBag.Title = "Index";
@@ -90,36 +91,36 @@
 <div class="well">
     <form class="form-horizontal">
         <div class="form-group">
-            <label for="category" class="col-sm-2 control-label">類別</label>
+            <label for="Category" class="col-sm-2 control-label">類別</label>
             <div class="col-sm-10">
-                <select id="category" name="category" class="form-control">
-                    <option value="" selected>請選擇</option>
-                    <option>支出</option>
-                    <option>收入</option>
+                <select id="Category" name="Category" class="form-control">
+                    <option value="0" selected>請選擇</option>
+                    <option value="1">支出</option>
+                    <option value="2">收入</option>
                 </select>
             </div>
         </div>
         <div class="form-group">
-            <label for="money" class="col-sm-2 control-label">金額</label>
+            <label for="Money" class="col-sm-2 control-label">金額</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="money" placeholder="金額">
+                <input type="text" class="form-control" id="Money" name="Money" placeholder="金額">
             </div>
         </div>
         <div class="form-group">
-            <label for="date" class="col-sm-2 control-label">日期</label>
+            <label for="ImplementDate" class="col-sm-2 control-label">日期</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="date" placeholder="日期">
+                <input type="text" class="form-control" id="ImplementDate" name="ImplementDate" placeholder="日期">
             </div>
         </div>
         <div class="form-group">
-            <label for="description" class="col-sm-2 control-label">備註</label>
+            <label for="Remark" class="col-sm-2 control-label">備註</label>
             <div class="col-sm-10">
-                <textarea class="form-control" id="description"></textarea>
+                <textarea class="form-control" id="description" name="Remark"></textarea>
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-8 col-sm-4">
-                <button type="submit" class="btn btn-default">送出</button>
+                <button type="submit" id="Send" name="Send" class="btn btn-default">送出</button>
             </div>
         </div>
     </form>

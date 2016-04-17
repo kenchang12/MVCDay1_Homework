@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 //須引入才能用IncomeAndPayRecordModel
-using MVCDay1_Homework_MyAccountingBook.Models;
+using MVCDay1_Homework_MyAccountingBook.Models.ViewModels;
 
 namespace MVCDay1_Homework_MyAccountingBook.Controllers
 {
