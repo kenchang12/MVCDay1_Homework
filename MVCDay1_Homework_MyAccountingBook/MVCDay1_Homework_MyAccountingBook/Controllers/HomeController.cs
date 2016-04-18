@@ -67,6 +67,7 @@ namespace MVCDay1_Homework_MyAccountingBook.Controllers
 
             List<IncomeAndPayRecordModel> viewModelList = new List<IncomeAndPayRecordModel>();
 
+            //取十筆日期最靠近現在的紀錄
             var myAccountData = dbContext.AccountBook
                                         .Take(10)
                                         .OrderByDescending(x => x.Dateee)
@@ -80,7 +81,8 @@ namespace MVCDay1_Homework_MyAccountingBook.Controllers
                     {
                         Category = "支出",
                         Money = item.Amounttt,
-                        ImplementDate = item.Dateee
+                        ImplementDate = item.Dateee,
+                        Remark = item.Remarkkk
                     });
                 }
                 else
@@ -89,7 +91,8 @@ namespace MVCDay1_Homework_MyAccountingBook.Controllers
                     {
                         Category = "收入",
                         Money = item.Amounttt,
-                        ImplementDate = item.Dateee
+                        ImplementDate = item.Dateee,
+                        Remark = item.Remarkkk
                     });
                 }
             }
