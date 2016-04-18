@@ -67,12 +67,12 @@ namespace MVCDay1_Homework_MyAccountingBook.Controllers
 
             List<IncomeAndPayRecordModel> viewModelList = new List<IncomeAndPayRecordModel>();
 
-            var myAccounting = dbContext.AccountBook
+            var myAccountData = dbContext.AccountBook
                                         .Take(10)
                                         .OrderByDescending(x => x.Dateee)
                                         //.AsEnumerable()
                                         .ToList();
-            foreach (var item in myAccounting)
+            foreach (var item in myAccountData)
             {
                 if(item.Categoryyy.Equals(1))
                 {
