@@ -1,4 +1,4 @@
-# MVCDay1_Homework
+# MVCDay1_Homework_MyAccountingBook
 
 此程式為Skilltree舉辦之「ASP.NET MVC5 實戰訓練營 」(105年4月9日~5月7日)的回家作業。
 講師：demo，
