@@ -98,5 +98,12 @@ namespace MVCDay1_Homework_MyAccountingBook.Controllers
             }
             return View(viewModelList);
         }
+
+        //釋放資源
+        protected override void Dispose(bool disposing)
+        {
+            dbContext.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }
