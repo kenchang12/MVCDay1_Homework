@@ -1,11 +1,13 @@
 ﻿@*@model MVCDay1_Homework_MyAccountingBook.Models.ViewModels.IncomeAndPayRecordModel*@
 
 @using MVCDay1_Homework_MyAccountingBook.Models.ViewModels
-@model List<IncomeAndPayRecordModel>
+@*@model List<IncomeAndPayRecordModel>*@
+@model IEnumerable<IncomeAndPayRecordModel>
 
 @{
     ViewBag.Title = "IncomeAndPayList";
     Layout = null;
+    int pointer = 0;
 }
 
 <table class="table table-bordered">
@@ -15,6 +17,7 @@
         <th>日期</th>
         <th>金額</th>
     </tr>
+@*
     @for (int i = 0; i < Model.Count; i++)
     {
         <tr>
@@ -23,5 +26,18 @@
             <td>@Model[i].ImplementDate.ToString("yyyy-MM-dd")</td>
             <td>@Model[i].Money.ToString("0,0")</td>
         </tr>
+    }
+*@
+    @if(Model.Count() > 0)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@(++pointer)</td>
+                <td>@item.Category</td>
+                <td>@item.ImplementDate.ToString("yyyy-MM-dd")</td>
+                <td>@item.Money.ToString("0,0")</td>
+            </tr>
+        }
     }
 </table>

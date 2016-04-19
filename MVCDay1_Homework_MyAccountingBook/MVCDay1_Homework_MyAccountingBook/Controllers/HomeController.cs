@@ -69,10 +69,10 @@ namespace MVCDay1_Homework_MyAccountingBook.Controllers
 
             //取十筆日期最靠近現在的紀錄
             var myAccountData = dbContext.AccountBook
-                                        .Take(10)
-                                        .OrderByDescending(x => x.Dateee)
-                                        //.AsEnumerable()
-                                        .ToList();
+                                         .Take(10)
+                                         .OrderByDescending(x => x.Dateee);
+                                         //.AsEnumerable()
+                                         //.ToList();
             foreach (var item in myAccountData)
             {
                 if(item.Categoryyy.Equals(1))

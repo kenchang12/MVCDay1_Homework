@@ -16,10 +16,14 @@ namespace MVCDay1_Homework_MyAccountingBook.Models.ViewModels
         public string Category { get; set; }
 
         [Required]
+        //設定數字格式是從個位數開始數每三位加一個逗點
+        [DisplayFormat(DataFormatString = "{0:0,0}")]
         [DisplayName("金額")]
         public long Money { get; set; }
 
         [Required]
+        //設定日期格式是西元年(4位數)-月份(2位數)-日(2位數)
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         [DisplayName("日期")]
         public DateTime ImplementDate { get; set; }
 
