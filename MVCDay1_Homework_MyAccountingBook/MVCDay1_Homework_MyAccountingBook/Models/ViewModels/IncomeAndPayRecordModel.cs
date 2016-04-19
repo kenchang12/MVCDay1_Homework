@@ -11,7 +11,9 @@ namespace MVCDay1_Homework_MyAccountingBook.Models.ViewModels
 {
     public class IncomeAndPayRecordModel
     {
+        //必要欄位
         [Required]
+        //顯示出來的字
         [DisplayName("種類")]
         public string Category { get; set; }
 
